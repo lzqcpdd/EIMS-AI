@@ -1,0 +1,253 @@
+<mxGraphModel dx="2400" dy="1600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- 标题 -->
+    <mxCell id="title" value="EIMS 企业综合管理平台 — 总体 E-R 图" style="text;html=1;fontSize=24;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="1200" y="20" width="600" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 系统管理域 ==================== -->
+    <mxCell id="sys_bg" value="" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;opacity=15;" vertex="1" parent="1">
+      <mxGeometry x="40" y="80" width="620" height="520" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys_label" value="系统管理域" style="text;html=1;fontSize=16;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="50" y="90" width="120" height="30" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_dept" value="&lt;b&gt;sys_dept&lt;/b&gt;&lt;br&gt;部门表&lt;hr size='1'&gt;PK id&lt;br&gt;FK parent_id (自关联)&lt;br&gt;dept_name / dept_code&lt;br&gt;sort_no / status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="60" y="130" width="180" height="170" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_user" value="&lt;b&gt;sys_user&lt;/b&gt;&lt;br&gt;系统用户表&lt;hr size='1'&gt;PK id&lt;br&gt;FK dept_id&lt;br&gt;user_name / nick_name&lt;br&gt;password / phone / email&lt;br&gt;status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="280" y="130" width="180" height="180" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_role" value="&lt;b&gt;sys_role&lt;/b&gt;&lt;br&gt;角色表&lt;hr size='1'&gt;PK id&lt;br&gt;role_name / role_code&lt;br&gt;data_scope / status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="60" y="340" width="180" height="150" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_menu" value="&lt;b&gt;sys_menu&lt;/b&gt;&lt;br&gt;菜单权限表&lt;hr size='1'&gt;PK id&lt;br&gt;FK parent_id (自关联)&lt;br&gt;menu_name / menu_code&lt;br&gt;menu_type / path / icon&lt;br&gt;sort_no&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="280" y="340" width="180" height="180" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_user_role" value="&lt;b&gt;sys_user_role&lt;/b&gt;&lt;br&gt;用户角色关联&lt;hr size='1'&gt;PK id&lt;br&gt;FK user_id&lt;br&gt;FK role_id&lt;br&gt;create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="500" y="180" width="140" height="120" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_role_menu" value="&lt;b&gt;sys_role_menu&lt;/b&gt;&lt;br&gt;角色菜单关联&lt;hr size='1'&gt;PK id&lt;br&gt;FK role_id&lt;br&gt;FK menu_id" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="500" y="340" width="140" height="80" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sys_op_log" value="&lt;b&gt;sys_operation_log&lt;/b&gt;&lt;br&gt;操作日志&lt;hr size='1'&gt;PK id&lt;br&gt;FK user_id&lt;br&gt;module_name / operation_type&lt;br&gt;business_id / request_uri&lt;br&gt;ip_address / operation_result&lt;br&gt;operation_time" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="500" y="460" width="140" height="130" as="geometry"/>
+    </mxCell>
+
+    <!-- 系统管理域连线 -->
+    <mxCell id="r_dept_user" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="sys_dept" target="sys_user" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_user_ur" value="N:M" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="sys_user" target="sys_user_role" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_role_ur" value="N:M" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.7;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="sys_role" target="sys_user_role" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_role_rm" value="N:M" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="sys_role" target="sys_role_menu" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_menu_rm" value="N:M" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="sys_menu" target="sys_role_menu" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_user_log" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.2;exitX=1;exitY=0.8;fontSize=9;" edge="1" source="sys_user" target="sys_op_log" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 基础信息域 ==================== -->
+    <mxCell id="base_bg" value="" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;opacity=15;" vertex="1" parent="1">
+      <mxGeometry x="700" y="80" width="620" height="520" as="geometry"/>
+    </mxCell>
+    <mxCell id="base_label" value="基础信息域" style="text;html=1;fontSize=16;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="710" y="90" width="120" height="30" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="supplier" value="&lt;b&gt;supplier&lt;/b&gt;&lt;br&gt;供应商&lt;hr size='1'&gt;PK id&lt;br&gt;supplier_code / supplier_name&lt;br&gt;contact_person / contact_phone&lt;br&gt;bank_account&lt;br&gt;qualification_status / score&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="720" y="130" width="190" height="180" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="customer" value="&lt;b&gt;customer&lt;/b&gt;&lt;br&gt;客户&lt;hr size='1'&gt;PK id&lt;br&gt;customer_code / customer_name&lt;br&gt;region / level&lt;br&gt;contact_person / contact_phone&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="720" y="340" width="190" height="170" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="material" value="&lt;b&gt;material&lt;/b&gt;&lt;br&gt;物料&lt;hr size='1'&gt;PK id&lt;br&gt;material_code / material_name&lt;br&gt;category / spec / unit&lt;br&gt;safety_stock / status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="950" y="130" width="190" height="170" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="warehouse" value="&lt;b&gt;warehouse&lt;/b&gt;&lt;br&gt;仓库&lt;hr size='1'&gt;PK id&lt;br&gt;warehouse_code / warehouse_name&lt;br&gt;location&lt;br&gt;FK manager_id → sys_user&lt;br&gt;status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="950" y="340" width="190" height="170" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="code_rule" value="&lt;b&gt;code_rule&lt;/b&gt;&lt;br&gt;编码规则&lt;hr size='1'&gt;PK id&lt;br&gt;rule_code / rule_name&lt;br&gt;prefix / date_pattern&lt;br&gt;seq_length / current_seq&lt;br&gt;status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="230" width="140" height="180" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 仓储管理域 ==================== -->
+    <mxCell id="wms_bg" value="" style="rounded=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;opacity=15;" vertex="1" parent="1">
+      <mxGeometry x="40" y="640" width="620" height="520" as="geometry"/>
+    </mxCell>
+    <mxCell id="wms_label" value="仓储管理域" style="text;html=1;fontSize=16;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="50" y="650" width="120" height="30" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="inventory" value="&lt;b&gt;inventory&lt;/b&gt;&lt;br&gt;库存&lt;hr size='1'&gt;PK id&lt;br&gt;FK warehouse_id&lt;br&gt;FK material_id&lt;br&gt;material_code / material_name&lt;br&gt;quantity / locked_quantity&lt;br&gt;safety_stock&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="60" y="690" width="190" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="stock_record" value="&lt;b&gt;stock_record&lt;/b&gt;&lt;br&gt;库存流水&lt;hr size='1'&gt;PK id&lt;br&gt;record_code&lt;br&gt;FK warehouse_id&lt;br&gt;FK material_id&lt;br&gt;business_type&lt;br&gt;quantity / before_quantity / after_quantity&lt;br&gt;FK business_id&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="280" y="690" width="190" height="210" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="stocktake" value="&lt;b&gt;stocktake&lt;/b&gt;&lt;br&gt;盘点单&lt;hr size='1'&gt;PK id&lt;br&gt;stocktake_code&lt;br&gt;FK warehouse_id&lt;br&gt;status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="60" y="920" width="190" height="150" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="stocktake_item" value="&lt;b&gt;stocktake_item&lt;/b&gt;&lt;br&gt;盘点明细&lt;hr size='1'&gt;PK id&lt;br&gt;FK stocktake_id&lt;br&gt;FK material_id&lt;br&gt;system_quantity&lt;br&gt;actual_quantity&lt;br&gt;diff_quantity" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="280" y="940" width="190" height="120" as="geometry"/>
+    </mxCell>
+
+    <!-- 仓储域连线 -->
+    <mxCell id="r_wh_inv" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="warehouse" target="inventory" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="700" y="600"/><mxPoint x="30" y="600"/><mxPoint x="30" y="747"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="r_mat_inv" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="material" target="inventory" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1045" y="620"/><mxPoint x="155" y="620"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="r_wh_sr" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="warehouse" target="stock_record" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1045" y="620"/><mxPoint x="375" y="620"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="r_st_si" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="stocktake" target="stocktake_item" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 采购管理域 ==================== -->
+    <mxCell id="pur_bg" value="" style="rounded=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;opacity=15;" vertex="1" parent="1">
+      <mxGeometry x="700" y="640" width="620" height="520" as="geometry"/>
+    </mxCell>
+    <mxCell id="pur_label" value="采购管理域" style="text;html=1;fontSize=16;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="710" y="650" width="120" height="30" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="pur_req" value="&lt;b&gt;purchase_request&lt;/b&gt;&lt;br&gt;采购申请&lt;hr size='1'&gt;PK id&lt;br&gt;request_code&lt;br&gt;FK dept_id&lt;br&gt;FK applicant_id → sys_user&lt;br&gt;total_amount / status&lt;br&gt;submit_time&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="720" y="690" width="190" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="pur_req_item" value="&lt;b&gt;purchase_request_item&lt;/b&gt;&lt;br&gt;采购申请明细&lt;hr size='1'&gt;PK id&lt;br&gt;FK request_id&lt;br&gt;FK material_id&lt;br&gt;material_code / material_name&lt;br&gt;quantity / unit_price&lt;br&gt;expected_date&lt;br&gt;create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="720" y="920" width="190" height="180" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="pur_quote" value="&lt;b&gt;purchase_quote&lt;/b&gt;&lt;br&gt;询价比价&lt;hr size='1'&gt;PK id&lt;br&gt;FK request_id&lt;br&gt;FK supplier_id&lt;br&gt;quote_amount / delivery_days&lt;br&gt;quality_score / is_selected&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="950" y="690" width="190" height="180" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="pur_order" value="&lt;b&gt;purchase_order&lt;/b&gt;&lt;br&gt;采购订单&lt;hr size='1'&gt;PK id&lt;br&gt;order_code&lt;br&gt;FK request_id&lt;br&gt;FK supplier_id&lt;br&gt;total_amount / status&lt;br&gt;expected_arrival_time&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="950" y="910" width="190" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="pur_approval" value="&lt;b&gt;purchase_approval&lt;/b&gt;&lt;br&gt;采购审批记录&lt;hr size='1'&gt;PK id&lt;br&gt;FK request_id&lt;br&gt;FK approver_id → sys_user&lt;br&gt;approval_level / result&lt;br&gt;comment / approval_time" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#9673a6;" vertex="1" parent="1">
+      <mxGeometry x="1170" y="780" width="140" height="130" as="geometry"/>
+    </mxCell>
+
+    <!-- 采购域连线 -->
+    <mxCell id="r_pr_pri" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="pur_req" target="pur_req_item" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_pr_pq" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="pur_req" target="pur_quote" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_pr_po" value="1:1" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.2;exitX=1;exitY=0.8;fontSize=9;" edge="1" source="pur_req" target="pur_order" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_sup_pq" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="supplier" target="pur_quote" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_sup_po" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="supplier" target="pur_order" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="815" y="620"/><mxPoint x="1045" y="620"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="r_pr_pa" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.5;fontSize=9;" edge="1" source="pur_req" target="pur_approval" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 销售管理域 ==================== -->
+    <mxCell id="sal_bg" value="" style="rounded=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;opacity=15;" vertex="1" parent="1">
+      <mxGeometry x="1360" y="80" width="620" height="1080" as="geometry"/>
+    </mxCell>
+    <mxCell id="sal_label" value="销售管理域" style="text;html=1;fontSize=16;fontStyle=1;fillColor=none;strokeColor=none;fontColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1370" y="90" width="120" height="30" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_lead" value="&lt;b&gt;sales_lead&lt;/b&gt;&lt;br&gt;销售线索&lt;hr size='1'&gt;PK id&lt;br&gt;lead_code / customer_name&lt;br&gt;source / level&lt;br&gt;FK owner_id → sys_user&lt;br&gt;status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="130" width="180" height="180" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_opp" value="&lt;b&gt;sales_opportunity&lt;/b&gt;&lt;br&gt;商机&lt;hr size='1'&gt;PK id&lt;br&gt;opportunity_code&lt;br&gt;FK lead_id&lt;br&gt;FK customer_id&lt;br&gt;opportunity_level&lt;br&gt;expected_amount / stage&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="350" width="180" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_quo" value="&lt;b&gt;sales_quotation&lt;/b&gt;&lt;br&gt;销售报价&lt;hr size='1'&gt;PK id&lt;br&gt;quotation_code&lt;br&gt;FK opportunity_id&lt;br&gt;FK customer_id&lt;br&gt;total_amount / valid_until&lt;br&gt;status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="580" width="180" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_con" value="&lt;b&gt;sales_contract&lt;/b&gt;&lt;br&gt;销售合同&lt;hr size='1'&gt;PK id&lt;br&gt;contract_code&lt;br&gt;FK customer_id&lt;br&gt;FK quotation_id&lt;br&gt;total_amount / sign_status&lt;br&gt;sign_time&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1380" y="810" width="180" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_ord" value="&lt;b&gt;sales_order&lt;/b&gt;&lt;br&gt;销售订单&lt;hr size='1'&gt;PK id&lt;br&gt;order_code&lt;br&gt;FK contract_id&lt;br&gt;FK customer_id&lt;br&gt;total_amount / status&lt;br&gt;payment_status&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1600" y="350" width="180" height="190" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_ord_item" value="&lt;b&gt;sales_order_item&lt;/b&gt;&lt;br&gt;销售订单明细&lt;hr size='1'&gt;PK id&lt;br&gt;FK order_id&lt;br&gt;FK material_id&lt;br&gt;material_code / material_name&lt;br&gt;quantity / unit_price&lt;br&gt;delivered_quantity" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1600" y="580" width="180" height="140" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_del" value="&lt;b&gt;sales_delivery&lt;/b&gt;&lt;br&gt;发货单&lt;hr size='1'&gt;PK id&lt;br&gt;delivery_code&lt;br&gt;FK order_id&lt;br&gt;FK warehouse_id&lt;br&gt;status / logistics_no&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1600" y="760" width="180" height="170" as="geometry"/>
+    </mxCell>
+
+    <mxCell id="sal_svc" value="&lt;b&gt;sales_after_service&lt;/b&gt;&lt;br&gt;售后服务&lt;hr size='1'&gt;PK id&lt;br&gt;service_code&lt;br&gt;FK order_id&lt;br&gt;FK customer_id&lt;br&gt;service_type / status&lt;br&gt;content&lt;br&gt;create_by / create_time&lt;br&gt;update_by / update_time&lt;br&gt;is_deleted / remark" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=8;fontSize=10;fillColor=#FFFFFF;strokeColor=#b85450;" vertex="1" parent="1">
+      <mxGeometry x="1600" y="970" width="180" height="180" as="geometry"/>
+    </mxCell>
+
+    <!-- 销售域连线 -->
+    <mxCell id="r_lead_opp" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="sal_lead" target="sal_opp" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_opp_quo" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="sal_opp" target="sal_quo" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_quo_con" value="1:1" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="sal_quo" target="sal_con" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_con_ord" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.3;exitX=1;exitY=0.3;fontSize=9;" edge="1" source="sal_con" target="sal_ord" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1580" y="867"/><mxPoint x="1580" y="407"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="r_ord_item" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="sal_ord" target="sal_ord_item" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_ord_del" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="sal_ord" target="sal_del" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_ord_svc" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;exitX=0.5;exitY=1;fontSize=9;" edge="1" source="sal_ord" target="sal_svc" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="r_cust_opp" value="1:N" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.2;exitX=1;exitY=0.5;fontSize=9;" edge="1" source="customer" target="sal_opp" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1340" y="428"/><mxPoint x="1340" y="388"/></Array></mxGeometry>
+    </mxCell>
+
+    <!-- 图例 -->
+    <mxCell id="legend" value="&lt;b&gt;图例&lt;/b&gt;&lt;br&gt;🔵 系统管理域&amp;nbsp;&amp;nbsp;🟢 基础信息域&lt;br&gt;🟡 仓储管理域&amp;nbsp;&amp;nbsp;🟣 采购管理域&lt;br&gt;🔴 销售管理域&amp;nbsp;&amp;nbsp;🟪 关联表&lt;br&gt;PK = 主键&amp;nbsp;&amp;nbsp;FK = 外键&lt;br&gt;连线标注: 1:1 / 1:N / N:M" style="shape=ext;rounded=0;whiteSpace=wrap;html=1;align=left;spacingLeft=10;fontSize=11;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+      <mxGeometry x="1820" y="80" width="160" height="130" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

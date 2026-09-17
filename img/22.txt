@@ -1,0 +1,155 @@
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- 标题 -->
+    <mxCell id="title" value="图 4.2 P0 基础模块结构图" style="text;html=1;fontSize=18;fontStyle=1;align=center;" vertex="1" parent="1">
+      <mxGeometry x="385" y="20" width="400" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- 顶层节点 -->
+    <mxCell id="p0_root" value="P0 基础模块" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;fontStyle=1;fillColor=#333333;fontColor=#FFFFFF;strokeColor=#333333;" vertex="1" parent="1">
+      <mxGeometry x="485" y="70" width="200" height="40" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 基础信息管理模块 ==================== -->
+    <mxCell id="base_module" value="基础信息管理模块" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="60" y="160" width="200" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="base_supplier" value="供应商管理" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="30" y="240" width="110" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="base_customer" value="客户管理" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="150" y="240" width="110" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="base_material" value="物料管理" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="30" y="290" width="110" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="base_warehouse" value="仓库管理" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="150" y="290" width="110" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="base_code_rule" value="自定义编码规则" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="30" y="340" width="110" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="base_data_clean" value="重复脏数据清洗" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#6c8ebf;" vertex="1" parent="1">
+      <mxGeometry x="150" y="340" width="110" height="35" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 仓储管理模块 ==================== -->
+    <mxCell id="wms_module" value="仓储管理模块" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="385" y="160" width="200" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="wms_scan" value="条码/RFID扫码出入库" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="355" y="240" width="130" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="wms_realtime" value="实时库存管控" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="495" y="240" width="130" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="wms_stocktake" value="周期盘点" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="355" y="290" width="130" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="wms_alert" value="库存预警" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="495" y="290" width="130" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="wms_record" value="出入库流水查询" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="355" y="340" width="130" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="wms_txn" value="事务一致性保障&lt;br&gt;联动采购/销售自动同步" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="495" y="340" width="130" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 系统管理模块 ==================== -->
+    <mxCell id="sys_module" value="系统管理模块（集成审批、财务公共能力）" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="710" y="160" width="260" height="40" as="geometry"/>
+    </mxCell>
+    
+    <mxCell id="sys_rbac" value="RBAC 五层权限体系" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="690" y="240" width="140" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys_org" value="树形组织架构" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="840" y="240" width="140" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys_audit" value="全量操作审计日志" style="rounded=1;whiteSpace=wrap;html=1;fontSize=11;fillColor=#FFFFFF;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="690" y="290" width="140" height="35" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys_approval" value="通用线上审批引擎&lt;br&gt;采购/销售共用·按金额分流" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#FFFFFF;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="840" y="290" width="140" height="45" as="geometry"/>
+    </mxCell>
+    <mxCell id="sys_finance" value="财务数据查询与对账报表&lt;br&gt;回款/开票/应收应付·仅财务可见" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;fillColor=#FFFFFF;strokeColor=#d79b00;" vertex="1" parent="1">
+      <mxGeometry x="765" y="350" width="190" height="45" as="geometry"/>
+    </mxCell>
+
+    <!-- ==================== 连线 ==================== -->
+    <!-- P0 → 三大模块 -->
+    <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.25;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;" edge="1" source="p0_root" target="base_module" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;" edge="1" source="p0_root" target="wms_module" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.75;exitY=1;entryX=0.5;entryY=0;strokeColor=#333333;" edge="1" source="p0_root" target="sys_module" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- 基础信息模块 → 子功能 -->
+    <mxCell id="eb1" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" source="base_module" target="base_supplier" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eb2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" source="base_module" target="base_customer" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="eb3" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" source="base_module" target="base_material" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="220"/><mxPoint x="85" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="eb4" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" source="base_module" target="base_warehouse" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="220"/><mxPoint x="205" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="eb5" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" source="base_module" target="base_code_rule" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="220"/><mxPoint x="85" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="eb6" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#6c8ebf;" edge="1" source="base_module" target="base_data_clean" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="160" y="220"/><mxPoint x="205" y="220"/></Array></mxGeometry>
+    </mxCell>
+
+    <!-- 仓储模块 → 子功能 -->
+    <mxCell id="ew1" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82b366;" edge="1" source="wms_module" target="wms_scan" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ew2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82b366;" edge="1" source="wms_module" target="wms_realtime" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="ew3" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82b366;" edge="1" source="wms_module" target="wms_stocktake" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="485" y="220"/><mxPoint x="420" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="ew4" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82b366;" edge="1" source="wms_module" target="wms_alert" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="485" y="220"/><mxPoint x="560" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="ew5" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#82b366;" edge="1" source="wms_module" target="wms_record" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="485" y="220"/><mxPoint x="420" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="ew6" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d6b656;" edge="1" source="wms_module" target="wms_txn" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="485" y="220"/><mxPoint x="560" y="220"/></Array></mxGeometry>
+    </mxCell>
+
+    <!-- 系统管理模块 → 子功能 -->
+    <mxCell id="es1" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" source="sys_module" target="sys_rbac" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="es2" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" source="sys_module" target="sys_org" parent="1">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+    <mxCell id="es3" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" source="sys_module" target="sys_audit" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="840" y="220"/><mxPoint x="760" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="es4" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" source="sys_module" target="sys_approval" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="840" y="220"/><mxPoint x="910" y="220"/></Array></mxGeometry>
+    </mxCell>
+    <mxCell id="es5" style="edgeStyle=orthogonalEdgeStyle;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#d79b00;" edge="1" source="sys_module" target="sys_finance" parent="1">
+      <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="840" y="220"/><mxPoint x="860" y="220"/></Array></mxGeometry>
+    </mxCell>
+
+  </root>
+</mxGraphModel>

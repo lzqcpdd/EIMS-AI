@@ -1,0 +1,81 @@
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    
+    <!-- 标题 -->
+    <mxCell id="title" value="图4.3 管理员功能模块结构图" style="text;html=1;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+      <mxGeometry x="385" y="20" width="400" height="30" as="geometry"/>
+    </mxCell>
+
+    <!-- 核心角色 -->
+    <mxCell id="admin_core" value="&lt;b&gt;系统管理员&lt;/b&gt;&lt;br&gt;(最高操作权限)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+      <mxGeometry x="485" y="340" width="200" height="100" as="geometry"/>
+    </mxCell>
+
+    <!-- (1) 用户与组织管理 -->
+    <mxCell id="mod_user_org" value="&lt;b&gt;(1) 用户与组织管理&lt;/b&gt;&lt;br&gt;• 内部/外部账号增删改停&lt;br&gt;• 多级树形部门架构维护&lt;br&gt;• 组织变更自动同步数据范围" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="80" y="80" width="240" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.3;jettySize=auto;" edge="1" parent="1" source="mod_user_org" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- (2) 角色与RBAC权限配置 -->
+    <mxCell id="mod_rbac" value="&lt;b&gt;(2) 角色与RBAC权限配置&lt;/b&gt;&lt;br&gt;• 菜单/按钮/接口/数据行四级权限&lt;br&gt;• 多角色绑定与权限叠加&lt;br&gt;• 数据隔离规则(部门/客户/供应商)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="80" y="220" width="260" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;jettySize=auto;" edge="1" parent="1" source="mod_rbac" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- (3) 基础编码与系统参数配置 -->
+    <mxCell id="mod_param" value="&lt;b&gt;(3) 基础编码与系统参数配置&lt;/b&gt;&lt;br&gt;• 物料/客户/供应商编码规则&lt;br&gt;• 审批阈值/库存预警/会话超时&lt;br&gt;• 修改即时生效，无需重启" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="80" y="370" width="260" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.7;jettySize=auto;" edge="1" parent="1" source="mod_param" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- (4) 附件与存储配置 -->
+    <mxCell id="mod_storage" value="&lt;b&gt;(4) 附件与存储配置&lt;/b&gt;&lt;br&gt;• MinIO存储桶权限管理&lt;br&gt;• 附件上传/下载访问控制&lt;br&gt;• 过期附件清理与空间优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="80" y="520" width="240" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=1;exitY=0.5;entryX=0.2;entryY=1;jettySize=auto;" edge="1" parent="1" source="mod_storage" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- (5) 全量审计日志管理 -->
+    <mxCell id="mod_audit" value="&lt;b&gt;(5) 全量审计日志管理&lt;/b&gt;&lt;br&gt;• 多维度筛选(人员/模块/时间/类型)&lt;br&gt;• 日志只读，不可删除篡改&lt;br&gt;• 批量导出Excel合规追溯" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="850" y="80" width="240" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.3;jettySize=auto;" edge="1" parent="1" source="mod_audit" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- (6) 数据清洗与基础数据兜底维护 -->
+    <mxCell id="mod_data_clean" value="&lt;b&gt;(6) 数据清洗与兜底维护&lt;/b&gt;&lt;br&gt;• 重复/无效数据批量合并修正&lt;br&gt;• 历史单据关联关系自动同步&lt;br&gt;• 解决历史数据混乱问题" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="830" y="220" width="260" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;jettySize=auto;" edge="1" parent="1" source="mod_data_clean" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- (7) 运维与备份查看 -->
+    <mxCell id="mod_ops" value="&lt;b&gt;(7) 运维与备份查看&lt;/b&gt;&lt;br&gt;• 数据库备份记录/服务状态监控&lt;br&gt;• 系统运行基础报表导出&lt;br&gt;• 异常日志定位与故障协同处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=10;fontSize=11;" vertex="1" parent="1">
+      <mxGeometry x="830" y="370" width="260" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.7;jettySize=auto;" edge="1" parent="1" source="mod_ops" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- 权限约束说明 -->
+    <mxCell id="constraint_note" value="⚠️ 权限约束：&lt;br&gt;• 所有业务单据仅查询，无修改权限&lt;br&gt;• 登录需账号+密码+图形验证码三重校验&lt;br&gt;• 账号锁定规则对管理员同样生效" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;size=15;align=left;spacingLeft=10;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+      <mxGeometry x="830" y="520" width="260" height="90" as="geometry"/>
+    </mxCell>
+    <mxCell id="edge_note" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0;exitY=0.5;entryX=0.8;entryY=1;dashed=1;jettySize=auto;strokeColor=#d6b656;" edge="1" parent="1" source="constraint_note" target="admin_core">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
