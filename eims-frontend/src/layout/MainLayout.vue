@@ -6,6 +6,11 @@
         <span>EIMS 管理平台</span>
       </div>
       <el-menu :default-active="route.path" router background-color="#0f172a" text-color="#94a3b8" active-text-color="#fff">
+        <!-- AI 智能问答（固定入口，不走后端菜单） -->
+        <el-menu-item index="/ai/query">
+          <el-icon><MagicStick /></el-icon>
+          <span>AI 智能问答</span>
+        </el-menu-item>
         <template v-for="menu in store.menus" :key="menu.id">
           <el-sub-menu v-if="menu.children?.length" :index="menu.path || String(menu.id)">
             <template #title>
@@ -49,6 +54,7 @@
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user'
+import { MagicStick } from '@element-plus/icons-vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -56,6 +62,7 @@ const store = useUserStore()
 
 const titleMap = {
   '/dashboard': '工作台',
+  '/ai/query': 'AI 智能问答',
   '/base/supplier': '供应商管理',
   '/wms/scan': '扫码出入库'
 }

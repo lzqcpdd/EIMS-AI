@@ -38,6 +38,7 @@ public class SecurityConfig {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/auth/login", "/auth/register").permitAll()
+                .antMatchers("/ai/**").permitAll()  // AI 查询接口测试期临时放行，上线前移到认证后
                 .anyRequest().authenticated()
                 .and()
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);

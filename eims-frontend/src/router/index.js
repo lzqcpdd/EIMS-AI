@@ -9,6 +9,7 @@ const routes = [
     redirect: '/dashboard',
     children: [
       { path: 'dashboard', component: () => import('@/views/Dashboard.vue') },
+      { path: 'ai/query', component: () => import('@/views/ai/Query.vue') },
       { path: 'base/supplier', component: () => import('@/views/base/Supplier.vue') },
       { path: 'base/customer', component: () => import('@/views/base/Customer.vue') },
       { path: 'base/material', component: () => import('@/views/base/Material.vue') },
